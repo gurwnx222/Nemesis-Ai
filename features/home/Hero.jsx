@@ -1,27 +1,27 @@
-'use client'
+'use client';
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
 import BotRobot from './components/BotRobot';
+import rocket from './components/rocket.png';
 
 const Hero = () => {
-
-  const [formData, setFormData] = useState("");
+  const [formData, setFormData] = useState('');
   const [formSubmit, setFormSubmit] = useState(false);
 
-  const handleWaitListForm = (e) =>{
+  const handleWaitListForm = e => {
     e.preventDefault();
     // logic of backend
-    console.log(formData)
+    console.log(formData);
 
     setFormSubmit(true);
-    setFormData("");
-  }
+    setFormData('');
+  };
 
   return (
-    <section className="m-10  h-auto">
+    <section className="m-10 w-auto  h-auto">
       <div className="flex flex-col mx-auto items-center gap-5 text-center pt-10">
-        <AnimatedGradientTextDemo />
+        <AnimatedGradientTextDemo text={"Launching soon!"}  img={rocket} />
         <h2 className="text-4xl font-semibold bg-gradient-to-r from-[#BB86FC] to-[#D0A8FF] text-transparent bg-clip-text">
           Reclaim Your Time—Let Bubble Handle <br />
           Your Threads Audience
@@ -46,15 +46,18 @@ const Hero = () => {
               className="pl-2 outline-none border-none bg-transparent"
             />
 
-            <button className= 'ml-6 bg-blue-500 cursor-pointer w-30 rounded-lg '
-            type='submit'
-            >Join Waitlist</button>
+            <button
+              className="ml-6 bg-blue-500 cursor-pointer w-30 rounded-lg "
+              type="submit"
+            >
+              Join Waitlist
+            </button>
           </form>
         </div>
       </div>
 
-      <BotRobot />
-      
+      {/* Bot Robot data */}
+      <BotRobot formData={formData} formSubmit={formSubmit} />
     </section>
   );
 };

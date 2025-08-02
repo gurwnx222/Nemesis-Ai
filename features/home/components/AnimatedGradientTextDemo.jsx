@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { ChevronRight, Images } from "lucide-react";
 import Image from "next/image";
-import rocket from './rocket.png'
 
 
-export function AnimatedGradientTextDemo() {
+
+export function AnimatedGradientTextDemo({text, img}) {
   return (
     <div className="w-36 gap-1 group relative mx-auto flex items-center justify-center rounded-full px-2 py-1 shadow-[inset_0_-6px_8px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-4px_8px_#8fdfff3f]">
       <span
@@ -21,9 +21,11 @@ export function AnimatedGradientTextDemo() {
           WebkitClipPath: "padding-box",
         }}
       />
-      <Image src={rocket} alt="Rocket" width={12} height={12} />
+      {img && (
+        <Image src={img} alt="Rocket" width={12} height={12} />
+      )}
       <AnimatedGradientText className="text-xs font-medium leading-none">
-        Launching soon!
+       {text}
       </AnimatedGradientText>
       <ChevronRight
         className="ml-1 size-3 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"

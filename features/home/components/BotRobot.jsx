@@ -1,13 +1,45 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import robot from './Robot.png';
 import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
 import { TextReveal } from '@/components/magicui/text-reveal';
 import { AnimatePresence, motion } from 'framer-motion';
+import eye from './Eye.png'
 
-const BotRobot = () => {
+const BotRobot = ({ formData, formSubmit }) => {
+  // For Emotions
+  const [emotions, setEmotions] = useState('');
+  const prevMessage = useRef('');
+
+  useEffect(() => {
+    let newResponse = '';
+
+    if (formSubmit) {
+      newResponse = '🎉 Thanks for submitting your formData!';
+    } else if (!formData) {
+      newResponse = '🤖 Hello! Waiting for your formData...';
+    } else if (!formData.includes('@')) {
+      newResponse = '🤔 Hmm... that doesn’t look like an formData yet.';
+    } else if (formData.includes('happy')) {
+      newResponse = '😊 You seem happy!';
+    } else if (formData.includes('sad')) {
+      newResponse = '😢 Aww, don’t be sad.';
+    } else if (formData.includes('.com') || formData.includes('.in')) {
+      newResponse = '✅ Looks like a real formData!';
+    } else {
+      newResponse = '🤖 Scanning...';
+    }
+
+    if (newResponse !== prevMessage.current) {
+      prevMessage.current = newResponse;
+      setEmotions(newResponse);
+    }
+  }, [formData, formSubmit]);
+
+  // Scrolling and blur
+
   const [blurAmount, setBlurAmount] = useState(0);
 
   const [scrollY, setScrollY] = useState(0);
@@ -26,7 +58,6 @@ const BotRobot = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,11 +87,17 @@ const BotRobot = () => {
     return () => window.removeEventListener('scroll', handleScrollCom);
   }, []);
 
+  useEffect(() => {
+    if (scrollY > 100) {
+      setEmotions('');
+    }
+  }, [scrollY]);
+
   return (
-    <div className="relative h-[270vh] bg-black">
+    <div className="relative h-[270vh] bg-black transition-all duration-500 ease-out">
       {/* Sticky Section */}
 
-      <div className="sticky top-40 z-10">
+      <div className="sticky top-40 z-10 ">
         <div
           className="relative w-fit mx-auto transition-all duration-300 ease-in-out "
           style={{
@@ -73,6 +110,23 @@ const BotRobot = () => {
 
           {/* Bot Image  */}
           <div className="relative z-10 w-auto">
+            {/* Bot Expressions */}
+            <div className=" relative top-30 left-10">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={emotions}
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.95, opacity: 0 }}
+                  transition={{ duration: 0.3, type: 'spring', bounce: 0.4 }}
+                  // daisy ui - But not working -
+                  className="text-center text-white chat-bubble mx-auto w-50"
+                >
+                  {emotions}
+                </motion.p>
+              </AnimatePresence>
+            </div>
+
             <Image src={robot} alt="bot" width={1020} height={1020} />
           </div>
         </div>
@@ -85,7 +139,7 @@ const BotRobot = () => {
         `}
       >
         <div className=" text-white relative  z-20 ">
-          <AnimatedGradientTextDemo />
+          <AnimatedGradientTextDemo text={"Our Mission"}  img={eye} />
         </div>
 
         <AnimatePresence>
@@ -122,7 +176,6 @@ const BotRobot = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className='m-0 p-0'>
 
       
       <body className={`${albertSans.variable} antialiased bg-black`} >
