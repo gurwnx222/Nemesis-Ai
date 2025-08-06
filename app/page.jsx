@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navbar from '@/layout/Navbar';
 
-import Hero from './Hero';
+import Hero from './components/Hero';
 
 const Home = () => {
   return (

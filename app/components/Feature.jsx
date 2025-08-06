@@ -2,7 +2,7 @@ import React from 'react';
 
 import rocket from '@/public/rocket.png';
 
-import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
+import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
 
 const Feature = () => {
   return (

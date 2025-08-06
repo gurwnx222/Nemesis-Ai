@@ -7,7 +7,7 @@ import image2 from '@/public/images/image2.png';
 import yash from '@/public/images/yash.png';
 import rocket from '@/public/rocket.png';
 
-import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
+import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
 
 const Team = () => {
   return (

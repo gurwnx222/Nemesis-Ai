@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 
 import rocket from '@/public/rocket.png';
 
-import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
-import BotRobot from './components/BotRobot';
+import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
+import BotRobot from './BotRobot';
 import Feature from './Feature';
 import Team from './Team';
 
