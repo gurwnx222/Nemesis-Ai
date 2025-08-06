@@ -6,6 +6,7 @@ import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo'
 import BotRobot from './components/BotRobot';
 import rocket from './components/rocket.png';
 import Team from './Team';
+import Feature from './Feature';
 
 const Hero = () => {
   const [formData, setFormData] = useState('');
@@ -62,6 +63,8 @@ const Hero = () => {
       <BotRobot formData={formData} formSubmit={formSubmit} />
 
       <Team />
+
+      <Feature />
     </section>
   );
 };
