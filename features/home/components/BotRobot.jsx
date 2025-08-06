@@ -2,11 +2,14 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import robot from './Robot.png';
-import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
-import { TextReveal } from '@/components/magicui/text-reveal';
+
 import { AnimatePresence, motion } from 'framer-motion';
+
+import { TextReveal } from '@/components/magicui/text-reveal';
+
+import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
 import eye from './Eye.png';
+import robot from './Robot.png';
 
 const BotRobot = ({ formData, formSubmit }) => {
   const [emotions, setEmotions] = useState('');
@@ -50,17 +53,17 @@ const BotRobot = ({ formData, formSubmit }) => {
     if (formSubmit) {
       newResponse = '🎉 Thanks for submitting your form!';
     } else if (!formData) {
-      newResponse = '🤖 Hello! Waiting for your input...';
+      newResponse = `Hello Creator! I'm bubble`;
     } else if (!formData.includes('@')) {
-      newResponse = '🤔 Hmm... that doesn’t look complete yet.';
+      newResponse = 'Waiting for your response.';
     } else if (formData.includes('happy')) {
-      newResponse = '😊 You seem happy!';
+      newResponse = 'You seem happy!';
     } else if (formData.includes('sad')) {
-      newResponse = '😢 Aww, don’t be sad.';
+      newResponse = `Aww, don't be sad.`;
     } else if (formData.includes('.com') || formData.includes('.in')) {
-      newResponse = '✅ Looks valid!';
+      newResponse = '❤ You are my Favorite Human Today!';
     } else {
-      newResponse = '🤖 Scanning...';
+      newResponse = 'Scanning...';
     }
 
     if (newResponse !== prevMessage.current) {
@@ -85,7 +88,7 @@ const BotRobot = ({ formData, formSubmit }) => {
         >
           {/* Rounded Background - Centered */}
           <div className="absolute inset-0 top-40 flex items-center justify-center -z-10">
-            <div className="bg-[#1E1E1E] rounded-[100px] w-[300px] h-[370px] "></div>
+            <div className="bg-[#1E1E1E] rounded-[100px] w-[300px] h-[370px] " />
           </div>
 
           {/* Bot Container */}

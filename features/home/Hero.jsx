@@ -49,7 +49,7 @@ const Hero = () => {
             />
 
             <button
-              className="p-2 2xl:ml-15 bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:scale-105 transform transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer w-30 rounded-xl"
+              className="ml-15 p-2 bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:scale-105 transform transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer w-30 rounded-xl"
               type="submit"
             >
               Join Waitlist
