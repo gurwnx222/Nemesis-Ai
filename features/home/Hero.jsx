@@ -38,7 +38,7 @@ const Hero = () => {
 
       {/* Form - waitlist */}
       <div className="p-[2px] w-[23%] md:w-[26%] mx-auto mt-14 rounded-xl bg-gradient-to-r from-purple-400 via-pink-300 to-pink-500">
-        <div className="bg-black rounded-lg py-2 text-white flex flex-row gap-2 ">
+        <div className="bg-black h-18  rounded-lg py-2 text-white flex flex-row gap-2 justify-center items-center ">
           <form onSubmit={handleWaitListForm}>
             <input
               type="email"
@@ -46,11 +46,11 @@ const Hero = () => {
               value={formData}
               onChange={e => setFormData(e.target.value)}
               required
-              className="pl-2 p-3 outline-none border-none bg-transparent md:h-4 md:text-lg md:pl-4"
+              className="pl-2 p-3 translate-y-4 outline-none border-none bg-transparent md:h-4 md:text-lg md:pl-4"
             />
 
             <button
-              className="p-2 ml-6 2xl:ml-18 bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:scale-105 transform transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer w-30 rounded-xl"
+              className="p-2 ml-10  2xl:ml-58 -translate-y-4 bg-blue-500 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:scale-105 transform transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer w-30 rounded-xl"
               type="submit"
             >
               Join Waitlist
