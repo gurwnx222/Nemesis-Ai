@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
 import BotRobot from './components/BotRobot';
 import rocket from './components/rocket.png';
@@ -22,7 +23,7 @@ const Hero = () => {
   return (
     <section className="m-10 w-auto  h-auto">
       <div className="flex flex-col mx-auto items-center gap-5 text-center pt-10">
-        <AnimatedGradientTextDemo text={"Launching soon!"}  img={rocket} />
+        <AnimatedGradientTextDemo text={'Launching soon!'} img={rocket} />
         <h2 className="text-4xl font-semibold bg-gradient-to-r from-[#BB86FC] to-[#D0A8FF] text-transparent bg-clip-text">
           Reclaim Your Time—Let Bubble Handle <br />
           Your Threads Audience

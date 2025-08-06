@@ -104,7 +104,7 @@ const eslintConfig = [
       'react-hooks/exhaustive-deps': 'warn',
 
       // Performance and optimization rules
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-console': ['warn', { allow: ['warn', 'error', 'log'] }],
       'no-debugger': 'error',
       'no-alert': 'error',
       'no-eval': 'error',
