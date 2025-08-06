@@ -2,9 +2,10 @@
 
 import React, { useState } from 'react';
 
+import rocket from '@/public/rocket.png';
+
 import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
 import BotRobot from './components/BotRobot';
-import rocket from './components/rocket.png';
 import Feature from './Feature';
 import Team from './Team';
 

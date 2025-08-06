@@ -1,6 +1,8 @@
 import React from 'react';
+
+import rocket from '@/public/rocket.png';
+
 import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
-import rocket from './components/rocket.png';
 
 const Feature = () => {
   return (
@@ -9,7 +11,7 @@ const Feature = () => {
       <AnimatedGradientTextDemo text={'Features'} img={rocket} />
 
       {/* Main Section */}
-      <main >
+      <main>
         <div class="grid grid-cols-[2fr_1fr] border-2">
           <div class="bg-gray-800 p-4 border-r-2">Left 1 </div>
           <div class="bg-gray-700 p-4">Right 1 </div>

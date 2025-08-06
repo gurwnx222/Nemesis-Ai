@@ -6,10 +6,10 @@ import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { TextReveal } from '@/components/magicui/text-reveal';
+import eye from '@/public/robot-images/Eye.png';
+import robot from '@/public/robot-images/Robot.png';
 
 import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
-import eye from './Eye.png';
-import robot from './Robot.png';
 
 const BotRobot = ({ formData, formSubmit }) => {
   const [emotions, setEmotions] = useState('');

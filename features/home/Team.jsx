@@ -1,12 +1,13 @@
 import React from 'react';
-import { ShineBorder } from '@/components/magicui/shine-border';
-import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
-import rocket from './components/rocket.png';
 import Image from 'next/image';
-import image1 from './components/images/image1.png';
-import image2 from './components/images/image2.png';
-import gurwinder from './components/images/gurwinder.png';
-import yash from './components/images/yash.png';
+
+import gurwinder from '@/public/images/gurwinder.png';
+import image1 from '@/public/images/image1.png';
+import image2 from '@/public/images/image2.png';
+import yash from '@/public/images/yash.png';
+import rocket from '@/public/rocket.png';
+
+import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
 
 const Team = () => {
   return (
