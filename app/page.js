@@ -1,11 +1,7 @@
-import Home from "@/features/home/Home"
+import Home from '@/features/home/Home';
 
 const page = () => {
-  return (
-    <>
-      <Home />
-    </>
-  )
-}
+  return <Home />;
+};
 
-export default page
+export default page;
