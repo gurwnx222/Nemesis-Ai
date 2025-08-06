@@ -1,15 +1,16 @@
-import React from 'react'
-import Hero from './Hero'
-import Navbar from '@/layout/Navbar'
+import React from 'react';
+
+import Navbar from '@/layout/Navbar';
+
+import Hero from './Hero';
 
 const Home = () => {
   return (
-    <>  
-     <Navbar />
-        <Hero />
-        
+    <>
+      <Navbar />
+      <Hero />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
