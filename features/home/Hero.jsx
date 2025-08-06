@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 import { AnimatedGradientTextDemo } from './components/AnimatedGradientTextDemo';
 import BotRobot from './components/BotRobot';
 import rocket from './components/rocket.png';
-import Team from './Team';
 import Feature from './Feature';
+import Team from './Team';
 
 const Hero = () => {
   const [formData, setFormData] = useState('');
