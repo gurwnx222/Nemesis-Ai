@@ -46,8 +46,8 @@ const Hero = () => {
               placeholder="Enter your email"
               value={formData}
               onChange={e => setFormData(e.target.value)}
-              required
               className="pl-2 p-3 outline-none border-none bg-transparent md:h-4 md:text-lg md:pl-4"
+              required
             />
 
             <button
