@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="m-10 w-auto  h-auto">
+    <section id="home" className="m-10 w-auto  h-auto">
       <div className="flex flex-col mx-auto items-center gap-5 text-center p-10">
         <AnimatedGradientTextDemo text={'Launching soon!'} img={rocket} />
         <h2 className="text-4xl 2xl:text-5xl 2xl:leading-auto font-semibold bg-gradient-to-r from-[#BB86FC] to-[#D0A8FF] text-transparent bg-clip-text">

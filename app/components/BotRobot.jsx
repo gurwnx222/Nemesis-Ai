@@ -73,90 +73,91 @@ const BotRobot = ({ formData, formSubmit }) => {
   }, [formData, formSubmit]);
 
   return (
-    <div
-      className="relative bg-black transition-all duration-500 ease-out"
-      ref={containerRef}
-    >
-      {/* Sticky Bot Section */}
-      <div className="sticky top-20 z-10 py-20">
-        <div
-          className="relative w-fit mx-auto transition-all duration-300 ease-in-out"
-          style={{
-            filter: `blur(${blurAmount}px)`,
-            transition: 'filter 0.2s ease-in-out',
-          }}
-        >
-          {/* Rounded Background - Centered */}
-          <div className="absolute inset-0 top-40 flex items-center justify-center -z-10">
-            <div className="bg-[#1E1E1E] rounded-[100px] w-[300px] h-[370px] " />
-          </div>
-
-          {/* Bot Container */}
-          <div className="relative z-10">
-            {/* Chat Bubble - Positioned above robot */}
-            <div className="absolute top-18 left-2/3 transform -translate-x-1/2 w-full max-w-xs">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={emotions}
-                  initial={{ scale: 0.95, opacity: 0, y: 10 }}
-                  animate={{ scale: 1, opacity: 1, y: 0 }}
-                  exit={{ scale: 0.95, opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3, type: 'spring', bounce: 0.4 }}
-                  className="text-center  text-white rounded-full py-3 px-6 mx-auto"
-                >
-                  {emotions}
-                </motion.div>
-              </AnimatePresence>
+    <section id="vision">
+      <div
+        className="relative bg-black transition-all duration-500 ease-out"
+        ref={containerRef}
+      >
+        {/* Sticky Bot Section */}
+        <div className="sticky top-20 z-10 py-20">
+          <div
+            className="relative w-fit mx-auto transition-all duration-300 ease-in-out"
+            style={{
+              filter: `blur(${blurAmount}px)`,
+              transition: 'filter 0.2s ease-in-out',
+            }}
+          >
+            {/* Rounded Background - Centered */}
+            <div className="absolute inset-0 top-40 flex items-center justify-center -z-10">
+              <div className="bg-[#1E1E1E] rounded-[100px] w-[300px] h-[370px] " />
             </div>
 
-            {/* Bot Image - Centered */}
-            <div className="flex justify-center ">
-              <Image
-                src={robot}
-                alt="bot"
-                width={1020}
-                height={1020}
-                className="w-[] h-auto"
-              />
+            {/* Bot Container */}
+            <div className="relative z-10">
+              {/* Chat Bubble - Positioned above robot */}
+              <div className="absolute top-18 left-2/3 transform -translate-x-1/2 w-full max-w-xs">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={emotions}
+                    initial={{ scale: 0.95, opacity: 0, y: 10 }}
+                    animate={{ scale: 1, opacity: 1, y: 0 }}
+                    exit={{ scale: 0.95, opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3, type: 'spring', bounce: 0.4 }}
+                    className="text-center  text-white rounded-full py-3 px-6 mx-auto"
+                  >
+                    {emotions}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Bot Image - Centered */}
+              <div className="flex justify-center ">
+                <Image
+                  src={robot}
+                  alt="bot"
+                  width={1020}
+                  height={1020}
+                  className="w-[] h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Content Section */}
-      <div className="relative z-20 mx-auto px-4 max-w-4xl pb-40">
-        {/* Mission Section - Fixed when sticky */}
-        {scrollY > threshold && (
-          <div
-            className={`transition-all duration-500 ${
-              isSticky ? 'fixed top-20 left-0 right-0 z-30' : 'relative pt-20'
-            }`}
-          >
-            <AnimatedGradientTextDemo text={'Our Mission'} img={eye} />
-          </div>
-        )}
-
-        {/* Text Reveal Sections */}
-        <div className="space-y-20 mt-[50vh]">
-          <AnimatePresence>
-            <motion.div
-              key="first-text"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-white"
+        {/* Content Section */}
+        <div className="relative z-20 mx-auto px-4 max-w-4xl pb-40">
+          {/* Mission Section - Fixed when sticky */}
+          {scrollY > threshold && (
+            <div
+              className={`transition-all duration-500 ${
+                isSticky ? 'fixed top-20 left-0 right-0 z-30' : 'relative pt-20'
+              }`}
             >
-              <TextReveal>
-                We believe every Threads creator deserves to be seen. That’s why
-                we’re building an AI assistant that takes care of monetizing
-                your reach so you can dive into creating, while we make sure
-                your voice spreads far and wide
-              </TextReveal>
-            </motion.div>
-          </AnimatePresence>
+              <AnimatedGradientTextDemo text={'Our Mission'} img={eye} />
+            </div>
+          )}
 
-          {/* <AnimatePresence>
+          {/* Text Reveal Sections */}
+          <div className="space-y-40 mt-[50vh]">
+            <AnimatePresence>
+              <motion.div
+                key="first-text"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-white"
+              >
+                <TextReveal>
+                  We believe every Threads creator deserves to be seen. That’s
+                  why we’re building an AI assistant that takes care of
+                  monetizing your reach so you can dive into creating, while we
+                  make sure your voice spreads far and wide
+                </TextReveal>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* <AnimatePresence>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -171,9 +172,10 @@ const BotRobot = ({ formData, formSubmit }) => {
               </TextReveal>
             </motion.div>
           </AnimatePresence> */}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

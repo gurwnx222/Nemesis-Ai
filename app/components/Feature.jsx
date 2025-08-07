@@ -1,29 +1,44 @@
 import React from 'react';
 
+// Import an icon component
+import { RocketIcon } from '@radix-ui/react-icons'; // or any icon you prefer
+
+import { BentoCard, BentoGrid } from '@/components/magicui/bento-grid';
 import rocket from '@/public/rocket.png';
 
 import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
 
 const Feature = () => {
   return (
-    <div className="text-white">
-      {/* beam */}
-      <AnimatedGradientTextDemo text={'Features'} img={rocket} />
-
-      {/* Main Section */}
-      <main>
-        <div class="grid grid-cols-[2fr_1fr] border-2">
-          <div class="bg-gray-800 p-4 border-r-2">Left 1 </div>
-          <div class="bg-gray-700 p-4">Right 1 </div>
-        </div>
-
-        {/* <!-- Row 2: Wide Right --> */}
-        <div class="grid grid-cols-[1fr_2fr] border-x-2 border-b-2">
-          <div class="bg-gray-700 p-4 border-r-2">Left 2 </div>
-          <div class="bg-gray-800 p-4">Right 2 </div>
-        </div>
-      </main>
-    </div>
+    <section id="features">
+      <div className="text-white">
+        {/* beam */}
+        <AnimatedGradientTextDemo text={'Features'} img={rocket} />
+        {/* Main Section */}
+        <BentoGrid>
+          <BentoCard
+            name="Feature 1"
+            description="This is a description of the first feature"
+            Icon={RocketIcon}
+            href="/feature-1"
+            cta="Learn more"
+            background={
+              <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-full h-full" />
+            }
+          />
+          <BentoCard
+            name="Feature 2"
+            description="This is a description of the second feature"
+            Icon={RocketIcon}
+            href="/feature-2"
+            cta="Explore"
+            background={
+              <div className="bg-gradient-to-br from-green-500 to-blue-600 w-full h-full" />
+            }
+          />
+        </BentoGrid>
+      </div>
+    </section>
   );
 };
 
