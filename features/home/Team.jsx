@@ -7,6 +7,8 @@ import image1 from './components/images/image1.png';
 import image2 from './components/images/image2.png';
 import gurwinder from './components/images/gurwinder.png';
 import yash from './components/images/yash.png';
+import cardGurwinder from './components/images/CardGurwinder.png';
+import cardSkeleton from './components/images/CardSkeleton.png';
 
 const Team = () => {
   return (
@@ -17,7 +19,7 @@ const Team = () => {
       </div>
 
       {/* For Gurwinder */}
-      <div className="relative flex flex-col items-center right-26 mt-26 ">
+      <div className="hidden lg:flex relative flex-col items-center mt-26">
         <div className="relative w-[330px] h-[300px] rounded-[50px]  p-7 z-0 bg-[#1E1E1E] flex flex-col justify-center ">
           {/* Box-1 */}
           <Image
@@ -42,8 +44,27 @@ const Team = () => {
         </div>
       </div>
 
+      {/* For mObile View */}
+      <div className="block lg:hidden relative flex flex-col items-center justify-center mt-26 gap-2">
+        <Image src={cardGurwinder} alt="card" />
+        <div className="mx-auto flex justify-center items-center">
+          <Image src={cardSkeleton} alt="card" />
+          <Image
+            src={yash}
+            alt="yash"
+            className=" absolute w-44 mx-auto  top-115"
+          />
+          <div className=' absolute font-medium  text-lg top-156 mx-7 text-[#F4F4F4]'>
+            
+            We built this to help creators automate smarter, grow faster, and
+            focus on what truly matters, without wasting energy on repetitive
+            tasks.
+          </div>
+        </div>
+      </div>
+
       {/* for yash */}
-      <div className="relative flex flex-col items-center right-26 mt-26 ">
+      <div className="hidden lg:flex relative flex-col items-center mt-26">
         <div className="relative w-[330px] h-[300px] rounded-[50px]  p-7 z-0 bg-[#1E1E1E] flex flex-col justify-center ">
           {/* Box-1 */}
           <Image

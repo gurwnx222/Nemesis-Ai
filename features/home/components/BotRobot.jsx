@@ -84,12 +84,12 @@ const BotRobot = ({ formData, formSubmit }) => {
           }}
         >
           {/* Rounded Background - Centered */}
-          <div className="absolute inset-0 top-40 flex items-center justify-center -z-10">
+          <div className="absolute inset-0 lg:top-40 top-60 flex items-center justify-center -z-10">
             <div className="bg-[#1E1E1E] rounded-[100px] w-[300px] h-[370px] "></div>
           </div>
 
           {/* Bot Container */}
-          <div className="relative z-10">
+          <div className="relative z-10 overflow-x-hidden">
             {/* Chat Bubble - Positioned above robot */}
             <div className="absolute top-18 left-2/3 transform -translate-x-1/2 w-full max-w-xs">
               <AnimatePresence mode="wait">
@@ -107,13 +107,13 @@ const BotRobot = ({ formData, formSubmit }) => {
             </div>
 
             {/* Bot Image - Centered */}
-            <div className="flex justify-center ">
+            <div className="flex justify-center lg:-translate-x-0 -translate-x-120 lg:w-auto w-[400%]    h-full">
               <Image
                 src={robot}
                 alt="bot"
                 width={1020}
                 height={1020}
-                className="w-[] h-auto"
+                className="w-[] "
               />
             </div>
           </div>
@@ -121,7 +121,7 @@ const BotRobot = ({ formData, formSubmit }) => {
       </div>
 
       {/* Content Section */}
-      <div className="relative z-20 mx-auto px-4 max-w-4xl pb-40">
+      <div className="relative z-20 mx-auto lg:px-4 max-w-4xl pb-40">
         {/* Mission Section - Fixed when sticky */}
         {scrollY > threshold && (
           <div
@@ -134,7 +134,7 @@ const BotRobot = ({ formData, formSubmit }) => {
         )}
 
         {/* Text Reveal Sections */}
-        <div className="space-y-20 mt-[50vh]">
+        <div className="space-y-20 mt-[50vh] ">
           <AnimatePresence>
             <motion.div
               key="first-text"
@@ -142,13 +142,28 @@ const BotRobot = ({ formData, formSubmit }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-white"
+              className="text-white hidden sm:inline"
             >
               <TextReveal>
                 We believe every Threads creator deserves to be seen. That’s why
                 we’re building an AI assistant that takes care of monetizing
                 your reach so you can dive into creating, while we make sure
                 your voice spreads far and wide
+              </TextReveal>
+            </motion.div>
+          </AnimatePresence>
+          <AnimatePresence>
+            <motion.div
+              key="first-text"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-white sm:hidden "
+            >
+              <TextReveal>
+                We believe every Threads creator deserves to be seen. That’s why
+                we’re building bubble to help you automate boring stuff
               </TextReveal>
             </motion.div>
           </AnimatePresence>
