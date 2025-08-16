@@ -1,6 +1,10 @@
 'use client';
 
 import { AnimatedList } from '@/components/magicui/animated-list';
+import {
+  Avatar,
+  AvatarOne,
+} from '@/components/magicui/feature-follower-images/Avatar';
 import { cn } from '@/lib/utils';
 
 const notifications = Array.from({ length: 1 }, () => [
@@ -8,15 +12,13 @@ const notifications = Array.from({ length: 1 }, () => [
     name: 'ether.wright',
     description: 'Followed you',
     time: '15m ago',
-    icon: '💸',
-    color: '#00C9A7',
+    icon: <Avatar />,
   },
   {
     name: 'iamnalimov',
     description: 'Followed you',
     time: '10m ago',
-    icon: '👤',
-    color: '#FFB800',
+    icon: <AvatarOne />,
   },
 ]).flat();
 

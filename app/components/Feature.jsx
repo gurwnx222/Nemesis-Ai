@@ -4,7 +4,6 @@ import React from 'react';
 import { useRef } from 'react';
 import Image from 'next/image';
 
-import { AnimatedBeam } from '@/components/magicui/animated-beam';
 import { Ripple } from '@/components/magicui/ripple';
 import click from '@/public/images/click.png';
 import userMutiple from '@/public/images/user-multiple-4.png';
