@@ -5,33 +5,19 @@ import { cn } from '@/lib/utils';
 
 const notifications = Array.from({ length: 1 }, () => [
   {
-    name: 'Payment received',
-    description: 'Magic UI',
+    name: 'ether.wright',
+    description: 'Followed you',
     time: '15m ago',
     icon: '💸',
     color: '#00C9A7',
   },
   {
-    name: 'User signed up',
-    description: 'Magic UI',
+    name: 'iamnalimov',
+    description: 'Followed you',
     time: '10m ago',
     icon: '👤',
     color: '#FFB800',
   },
-  //   {
-  //     name: "New message",
-  //     description: "Magic UI",
-  //     time: "5m ago",
-  //     icon: "💬",
-  //     color: "#FF3D71",
-  //   },
-  //   {
-  //     name: "New event",
-  //     description: "Magic UI",
-  //     time: "2m ago",
-  //     icon: "🗞️",
-  //     color: "#1E86FF",
-  //   },
 ]).flat();
 
 const Notification = ({ name, description, icon, color, time }) => {

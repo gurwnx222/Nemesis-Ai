@@ -1,12 +1,13 @@
 'use client';
 
 import React, { forwardRef, useRef } from 'react';
-import { cn } from '@/lib/utils'; // Assumes you have a cn utility for Tailwind CSS
-import { AnimatedBeam } from '@/components/magicui/animated-beam'; // Assumes you are using Magic UI
-import user from './images/user-4.png';
-import logo from './images/Logo.png';
-import threadIcon from './images/threads-icon.png';
 import Image from 'next/image';
+
+import { AnimatedBeam } from '@/components/magicui/animated-beam'; // Assumes you are using Magic UI
+import { cn } from '@/lib/utils'; // Assumes you have a cn utility for Tailwind CSS
+import logo from '@/public/images/Logo.png';
+import threadIcon from '@/public/images/threads-icon.png';
+import user from '@/public/images/user-4.png';
 
 // Helper component for the circular nodes
 const Circle = forwardRef(({ className, children }, ref) => {
@@ -37,6 +38,7 @@ const Square = forwardRef(({ className, children }, ref) => {
     </div>
   );
 });
+Square.displayName = 'Square';
 
 Circle.displayName = 'Circle';
 
@@ -329,7 +331,7 @@ const Icons = {
                       fillRule="nonzero"
                       mask="url(#mask-4)"
                       points="30.6638281 16.4309659 47 32.8582386 47 17.7272727"
-                    ></polygon>
+                    />
                   </g>
                   <g id="Clipped">
                     <mask id="mask-7" fill="white">
@@ -470,13 +472,13 @@ const Icons = {
         gradientTransform="matrix(1 0 0 -1 0 50)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#1292ff"></stop>
-        <stop offset=".079" stopColor="#2982ff"></stop>
-        <stop offset=".23" stopColor="#4e69ff"></stop>
-        <stop offset=".351" stopColor="#6559ff"></stop>
-        <stop offset=".428" stopColor="#6d53ff"></stop>
-        <stop offset=".754" stopColor="#df47aa"></stop>
-        <stop offset=".946" stopColor="#ff6257"></stop>
+        <stop offset="0" stopColor="#1292ff" />
+        <stop offset=".079" stopColor="#2982ff" />
+        <stop offset=".23" stopColor="#4e69ff" />
+        <stop offset=".351" stopColor="#6559ff" />
+        <stop offset=".428" stopColor="#6d53ff" />
+        <stop offset=".754" stopColor="#df47aa" />
+        <stop offset=".946" stopColor="#ff6257" />
       </radialGradient>
       <path
         fill="url(#8O3wK6b5ASW2Wn6hRCB5xa_YFbzdUk7Q3F8_gr1)"

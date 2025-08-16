@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 
-import BotRobot from '@/public/robot-images/Robot.png';
 import rocket from '@/public/rocket.png';
 
 import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
+import BotRobot from './BotRobot';
+import Feature from './Feature';
 import Team from './Team';
 
 const Hero = () => {
@@ -70,7 +71,7 @@ const Hero = () => {
 
       <Team />
 
-      {/* <Feature /> */}
+      <Feature />
     </section>
   );
 };

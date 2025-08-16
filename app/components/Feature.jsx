@@ -1,44 +1,98 @@
+/* eslint-disable unused-imports/no-unused-vars */
+'use client';
 import React from 'react';
+import { useRef } from 'react';
+import Image from 'next/image';
 
-// Import an icon component
-import { RocketIcon } from '@radix-ui/react-icons'; // or any icon you prefer
-
-import { BentoCard, BentoGrid } from '@/components/magicui/bento-grid';
+import { AnimatedBeam } from '@/components/magicui/animated-beam';
+import { Ripple } from '@/components/magicui/ripple';
+import click from '@/public/images/click.png';
+import userMutiple from '@/public/images/user-multiple-4.png';
+import vector from '@/public/images/Vector.png';
+import vector2 from '@/public/images/Vector-2.png';
 import rocket from '@/public/rocket.png';
 
+import { AnimatedFollowers } from './AnimatedFollowers';
 import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
+import { InfiniteMovingCardsDemo } from './CardsAnimations';
+import { DataFlowAnimation } from './DataFlowAnimation';
 
 const Feature = () => {
+  const containerRef = useRef(null);
+  const fromRef = useRef(null);
+  const toRef = useRef(null);
+
   return (
-    <section id="features">
-      <div className="text-white">
-        {/* beam */}
-        <AnimatedGradientTextDemo text={'Features'} img={rocket} />
-        {/* Main Section */}
-        <BentoGrid>
-          <BentoCard
-            name="Feature 1"
-            description="This is a description of the first feature"
-            Icon={RocketIcon}
-            href="/feature-1"
-            cta="Learn more"
-            background={
-              <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-full h-full" />
-            }
-          />
-          <BentoCard
-            name="Feature 2"
-            description="This is a description of the second feature"
-            Icon={RocketIcon}
-            href="/feature-2"
-            cta="Explore"
-            background={
-              <div className="bg-gradient-to-br from-green-500 to-blue-600 w-full h-full" />
-            }
-          />
-        </BentoGrid>
-      </div>
-    </section>
+    <div className="text-white mx-18 mt-30">
+      {/* beam */}
+      <AnimatedGradientTextDemo text={'Features'} img={rocket} />
+
+      {/* Main Section */}
+      <main className="mt-20 ">
+        <div className="grid h-auto grid-cols-[2fr_1fr] border-2 border-[#9F9F9F]">
+          <div className=" p-4 border-r-2 border-[#9F9F9F]">
+            {/* Top Left section */}
+            <DataFlowAnimation />
+
+            <div className="flex flex-col gap-1.5 m-2 mt-15">
+              <Image src={vector} alt="vector" />
+              <h2 className="font-semibold text-2xl">
+                Automated Resource Sharing
+              </h2>
+              <p className=" text-[#757575]">
+                Bubble automatically responds to audience comments with relevant
+                resources so creators don&apos;t have to manually share them
+              </p>
+            </div>
+          </div>
+          <div className="bg-transparent  p-4">
+            <InfiniteMovingCardsDemo />
+            {/* Contnet */}
+            <div className="flex flex-col gap-1.5 m-2">
+              <Image src={click} alt="click" />
+              <h2 className="font-semibold text-2xl">Simple 3-Click Setup</h2>
+              <p className=" text-[#757575]">
+                Get started with the platform in a 3 click setup. Cutting down
+                hours of manual setup.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* <!-- Row 2: Wide Right --> */}
+        <div className="grid grid-cols-[1fr_2fr] border-x-2 border-b-2 border-[#9F9F9F]">
+          <div className="  border-r-2 border-[#9F9F9F]">
+            <div className="relative flex gap-1.5 h-[400px] w-full  flex-col items-center justify-center overflow-hidden rounded-lg   bg-transparent ">
+              <div className="z-10  text-white m-7 mt-50">
+                <Image src={vector2} alt="vector -2" />
+                <h2 className="font-semibold text-2xl">
+                  Creating Comment funnel
+                </h2>
+                <p className=" text-[#757575]">
+                  Bubble helps you create an exclusive comment funnels to boost
+                  your sales while you sleep.
+                </p>
+              </div>
+              <Ripple />
+            </div>
+          </div>
+          <div className=" p-4 ">
+            <AnimatedFollowers />
+
+            <div className="m-2">
+              <Image src={userMutiple} alt="users" />
+              <h2 className="font-semibold text-2xl">
+                Automated DM Conversion
+              </h2>
+              <p className=" text-[#757575]">
+                Bubble sends conditional DMs to convert people into followers
+                (by the new Threads DM feature)
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 };
 

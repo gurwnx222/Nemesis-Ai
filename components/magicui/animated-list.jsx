@@ -1,10 +1,9 @@
+'use client';
 import React, { useEffect, useMemo, useState } from 'react';
 
 import { AnimatePresence, motion } from 'motion/react';
 
 import { cn } from '@/lib/utils';
-
-('use client');
 
 export function AnimatedListItem({ children }) {
   const animations = {
