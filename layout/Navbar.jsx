@@ -50,7 +50,7 @@ const Navbar = () => {
               className="text-white/80 hover:text-white transition-all duration-300 text-lg font-medium tracking-wide hover:scale-105 relative group"
             >
               {item.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/60 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/60 transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
         </div>
