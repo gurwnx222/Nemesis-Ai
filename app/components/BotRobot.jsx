@@ -79,7 +79,7 @@ const BotRobot = ({ formData, formSubmit }) => {
         ref={containerRef}
       >
         {/* Sticky Bot Section */}
-        <div className="sticky top-20 z-10 py-20">
+        <div className="sticky top-20 z-10 py-10">
           <div
             className="relative w-fit mx-auto transition-all duration-300 ease-in-out"
             style={{
