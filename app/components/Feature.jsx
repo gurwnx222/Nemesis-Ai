@@ -22,7 +22,7 @@ const Feature = () => {
   const toRef = useRef(null);
 
   return (
-    <div className="text-white mx-18 mt-30">
+    <div id="features" className="text-white mx-18 mt-30">
       {/* beam */}
       <AnimatedGradientTextDemo text={'Features'} img={rocket} />
 
