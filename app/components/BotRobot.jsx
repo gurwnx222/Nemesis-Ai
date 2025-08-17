@@ -51,7 +51,7 @@ const BotRobot = ({ formData, formSubmit }) => {
     let newResponse = '';
 
     if (formSubmit) {
-      newResponse = '🎉 Thanks for submitting your form!';
+      newResponse = '🎉 Thanks for Joining!';
     } else if (!formData) {
       newResponse = `Hello Creator! I'm bubble`;
     } else if (!formData.includes('@')) {
