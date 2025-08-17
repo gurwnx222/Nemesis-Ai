@@ -63,8 +63,8 @@ export function AnimatedFollowers({ className }) {
       )}
     >
       <AnimatedList>
-        {notifications.map((item, idx) => (
-          <Notification key={idx} {...item} />
+        {notifications.map((item) => (
+          <Notification key={item.id} {...item} />
         ))}
       </AnimatedList>
 

@@ -1,13 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-import cardGurwinder from '@/public/images/CardGurwinder.png';
 import cardSkeleton from '@/public/images/CardSkeleton.png';
 import gurwinder from '@/public/images/gurwinder.png';
 import image1 from '@/public/images/image1.png';
 import image2 from '@/public/images/image2.png';
 import yash from '@/public/images/yash.png';
-
 import rocket from '@/public/rocket.png';
 
 import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';

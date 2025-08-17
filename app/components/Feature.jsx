@@ -1,6 +1,10 @@
 /* eslint-disable unused-imports/no-unused-vars */
 'use client';
+
+import  { useRef } from 'react';
+
 import React from 'react';
+
 import Image from 'next/image';
 
 import { Ripple } from '@/components/magicui/ripple';
