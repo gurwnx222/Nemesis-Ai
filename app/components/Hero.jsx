@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import axios from 'axios';
 
 import rocket from '@/public/rocket.png';
@@ -9,7 +10,6 @@ import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
 import BotRobot from './BotRobot';
 import Feature from './Feature';
 import Team from './Team';
-import { CloudLightning } from 'lucide-react';
 
 const Hero = () => {
   const [email, setEmail] = useState("");
