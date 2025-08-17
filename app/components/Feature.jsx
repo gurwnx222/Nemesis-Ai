@@ -22,14 +22,14 @@ const Feature = () => {
   const toRef = useRef(null);
 
   return (
-    <div id="features" className="text-white mx-18 mt-30 mb-30">
+    <div id="features" className="text-white md:mx-18 mt-30 mb-30">
       {/* beam */}
       <AnimatedGradientTextDemo text={'Features'} img={rocket} />
 
       {/* Main Section */}
       <main className="mt-20 ">
-        <div className="grid h-auto grid-cols-[2fr_1fr] border-2 border-[#9F9F9F]">
-          <div className=" p-4 border-r-2 border-[#9F9F9F]">
+        <div className="grid w-auto h-auto grid-cols-1 md:grid-cols-[2fr_1fr]  border-2 border-[#9F9F9F]">
+          <div className=" p-4 border-b-2 md:border-b-0 md:border-r-2 border-[#9F9F9F]">
             {/* Top Left section */}
             <DataFlowAnimation />
 
@@ -59,8 +59,8 @@ const Feature = () => {
         </div>
 
         {/* <!-- Row 2: Wide Right --> */}
-        <div className="grid grid-cols-[1fr_2fr] border-x-2 border-b-2 border-[#9F9F9F]">
-          <div className="  border-r-2 border-[#9F9F9F]">
+        <div className="grid gird-cols-1 md:grid-cols-[1fr_2fr] border-x-2 border-b-2 border-[#9F9F9F]">
+          <div className="border-r-2 border-[#9F9F9F]">
             <div className="relative flex gap-1.5 h-[400px] w-full  flex-col items-center justify-center overflow-hidden rounded-lg   bg-transparent ">
               <div className="z-10  text-white m-7 mt-50">
                 <Image src={vector2} alt="vector -2" />
