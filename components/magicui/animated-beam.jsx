@@ -74,7 +74,7 @@ export const AnimatedBeam = ({
     // Initialize ResizeObserver
     const resizeObserver = new ResizeObserver(entries => {
       // For all entries, recalculate the path
-      for (const entry of entries) {
+      for (const _entry of entries) {
         updatePath();
       }
     });

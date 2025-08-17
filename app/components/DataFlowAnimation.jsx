@@ -45,11 +45,11 @@ Circle.displayName = 'Circle';
 // The main exportable component
 export function DataFlowAnimation({ className }) {
   const containerRef = useRef(null);
-  const div1Ref = useRef(null);
-  const div2Ref = useRef(null);
+  // const div1Ref = useRef(null);
+  // const div2Ref = useRef(null);
   const div3Ref = useRef(null);
-  const div4Ref = useRef(null);
-  const div5Ref = useRef(null);
+  // const div4Ref = useRef(null);
+  // const div5Ref = useRef(null);
   const div6Ref = useRef(null);
   const div7Ref = useRef(null);
 
@@ -118,7 +118,7 @@ export function DataFlowAnimation({ className }) {
   );
 }
 
-const Icons = {
+const _Icons = {
   notion: () => (
     <svg
       width="100"

@@ -1,6 +1,10 @@
 /* eslint-disable unused-imports/no-unused-vars */
 'use client';
+
+import  { useRef } from 'react';
+
 import React from 'react';
+
 import Image from 'next/image';
 
 import { Ripple } from '@/components/magicui/ripple';
@@ -55,7 +59,7 @@ const Feature = () => {
 
         {/* <!-- Row 2: Wide Right --> */}
         <div className="grid gird-cols-1 md:grid-cols-[1fr_2fr] border-x-2 border-b-2 border-[#9F9F9F]">
-          <div className="border-r-2 border-[#9F9F9F]">
+          <div className="border-b-2 md:border-b-0 md:border-r-2 border-[#9F9F9F]">
             <div className="relative flex gap-1.5 h-[400px] w-full  flex-col items-center justify-center overflow-hidden rounded-lg   bg-transparent ">
               <div className="z-10  text-white m-7 mt-50">
                 <Image src={vector2} alt="vector -2" />
@@ -71,7 +75,7 @@ const Feature = () => {
             </div>
           </div>
           <div className=" p-4 ">
-            <AnimatedFollowers />
+            <AnimatedFollowers /> 
 
             <div className="m-2">
               <Image src={userMutiple} alt="users" />
