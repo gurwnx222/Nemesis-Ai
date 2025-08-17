@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Copyright - Right Side */}
           <div className="text-gray-600 text-sm">
-            © 2025 Your Company. All rights reserved.
+            © 2025 Nemesis Ai. All rights reserved.
           </div>
         </div>
       </div>

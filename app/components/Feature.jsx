@@ -1,6 +1,10 @@
 /* eslint-disable unused-imports/no-unused-vars */
 'use client';
-import React, { useRef } from 'react';
+
+import  { useRef } from 'react';
+
+import React from 'react';
+
 import Image from 'next/image';
 
 import { Ripple } from '@/components/magicui/ripple';
@@ -16,10 +20,6 @@ import { InfiniteMovingCardsDemo } from './CardsAnimations';
 import { DataFlowAnimation } from './DataFlowAnimation';
 
 const Feature = () => {
-  const containerRef = useRef(null);
-  const fromRef = useRef(null);
-  const toRef = useRef(null);
-
   return (
     <div id="features" className="text-white md:mx-18 mt-30 mb-30">
       {/* beam */}

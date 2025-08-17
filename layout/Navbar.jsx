@@ -65,7 +65,7 @@ const Navbar = () => {
           <h2 className="tracking-widest font-bold text-xl drop-shadow-lg">
             Nemesis
           </h2>
-          <div className="bg-black/30 backdrop-blur-md border border-white/20 w-10 h-10 rounded-full flex justify-center items-center shadow-lg">
+          <div className="bg-black/30 backdrop-blur-md border border-white/20 w-10 h-10 rounded-xl flex justify-center items-center shadow-lg">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white cursor-pointer text-xl hover:scale-110 transition-transform duration-200"
