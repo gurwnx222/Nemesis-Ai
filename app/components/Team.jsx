@@ -7,6 +7,7 @@ import gurwinder from '@/public/images/gurwinder.png';
 import image1 from '@/public/images/image1.png';
 import image2 from '@/public/images/image2.png';
 import yash from '@/public/images/yash.png';
+
 import rocket from '@/public/rocket.png';
 
 import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
@@ -40,14 +41,25 @@ const Team = () => {
           </div>
           {/* Box-2 */}
           <div className="relative w-[330px] h-[300px] rounded-[50px] left-[18%] -top-10 p-7 z-10 bg-[#1E1E1E] flex flex-col justify-center ">
-            {/* Box-1 */}
-
             <Image src={gurwinder} alt="gurwinder" />
           </div>
         </div>
         {/* For mObile View */}
         <div className="lg:hidden relative flex flex-col items-center justify-center mt-26 gap-2">
-          <Image src={cardGurwinder} alt="card" />
+          <div className="mx-auto flex justify-center items-center ">
+            <Image src={cardSkeleton} alt="card" className="scale-x-[-1]" />
+            <Image
+              src={gurwinder}
+              alt="yash"
+              className=" absolute w-44 mx-auto  top-10"
+            />
+            <div className=" absolute font-medium  text-lg top-50 mx-7 text-[#F4F4F4]">
+              Currently there is no dedicated platform for growing on Threads. I
+              envisioned automating the Threads journey to empower creators like
+              us, so if we’re not doing it, then who will?
+            </div>
+          </div>
+
           <div className="mx-auto flex justify-center items-center">
             <Image src={cardSkeleton} alt="card" />
             <Image
