@@ -4,7 +4,7 @@ import { Instagram, Mail, Twitter } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className=" w-full">
+    <footer className="w-full">
       {/* Separator */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
 

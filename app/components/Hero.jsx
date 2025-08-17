@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import axios from 'axios';
 
 import rocket from '@/public/rocket.png';
 
@@ -8,18 +9,30 @@ import { AnimatedGradientTextDemo } from './AnimatedGradientTextDemo';
 import BotRobot from './BotRobot';
 import Feature from './Feature';
 import Team from './Team';
+import { CloudLightning } from 'lucide-react';
 
 const Hero = () => {
-  const [formData, setFormData] = useState('');
+  const [email, setEmail] = useState("");
   const [formSubmit, setFormSubmit] = useState(false);
 
-  const handleWaitListForm = e => {
+  const handleWaitListForm = async (e) => {
     e.preventDefault();
     // logic of backend
-    console.log(formData);
 
-    setFormSubmit(true);
-    setFormData('');
+    try {
+      const res = await axios.post("/api/email", { email });
+      console.log('Success: ', res.data);
+      setFormSubmit(true);
+      setEmail('');
+    } catch (err) {
+      console.error("Error: ", err);
+      setFormSubmit(false); 
+    }
+
+    // console.log(formData);
+
+    // setFormSubmit(true);
+    // setFormData('');
   };
 
   return (
@@ -50,8 +63,8 @@ const Hero = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              value={formData}
-              onChange={e => setFormData(e.target.value)}
+              value={email}
+              onChange={e => setEmail(e.target.value)}
               required
               className="pl-2 p-3 translate-y-4 outline-none border-none bg-transparent md:h-4 md:text-lg md:pl-4"
             />
@@ -67,7 +80,7 @@ const Hero = () => {
       </div>
 
       {/* Bot Robot data */}
-      <BotRobot formData={formData} formSubmit={formSubmit} />
+      <BotRobot email={email} formSubmit={formSubmit} />
 
       <Team />
 
