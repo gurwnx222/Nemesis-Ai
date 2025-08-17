@@ -44,3 +44,6 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+#documentation files
+.linting-rules.md
